@@ -53,7 +53,8 @@ def main():
         fileExtention = sys.argv[2]
 
         fileNameList = showFileNameAccExtention(directoryName,fileExtention)
-        CreateLog.createLogFile("FileAutomationLogs",fileNameList)
+        if(len(fileNameList) > 0):
+            CreateLog.createLogFile("FileAutomationLogs",fileNameList)
     else:
         print("Invalid number of arguments")
         print("Used the given flaga as:")
